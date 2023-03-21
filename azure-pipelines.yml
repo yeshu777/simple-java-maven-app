@@ -23,5 +23,6 @@ steps:
 - task: ArtifactoryGenericUpload@2
   inputs:
     artifactoryService: 'Yeshu'
-    specSource: 'taskConfiguration'
+    specSource: 'file'
+    file: '$(Build.SourcesDirectory)/target/*.jar'
     failNoOp: true
